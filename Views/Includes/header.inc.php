@@ -60,10 +60,10 @@ $menus = MenusModel::getInstance();
         <button id="dropdownDelayButton" data-dropdown-offset-distance=0 data-dropdown-toggle="dropdownPlayer" data-dropdown-delay="10" data-dropdown-trigger="hover" style="background-color: var(--bg-pixcraft-player); color: var(--nav-color-pixcraft-player)" class="py-2 px-4 rounded">
             <img class="inline mr-2" alt="player head" width="30px" src="https://apiv2.craftmywebsite.fr/skins/3d/user=<?= UsersModel::getCurrentUser()->getPseudo() ?>&headOnly=true"> <?= UsersModel::getCurrentUser()->getPseudo() ?>
         </button>
-        <div id="dropdownPlayer" style="background-color: var(--bg-pixcraft-player); color: var(--nav-color-pixcraft-player)" class="z-10 hidden shadow w-full md:w-52 rounded shadow">
+        <div id="dropdownPlayer" style="background-color: var(--bg-pixcraft-player); color: var(--nav-color-pixcraft-player); z-index: 500;" class="hidden shadow w-full md:w-52 rounded shadow">
             <div aria-labelledby="dropdownDelayButton" class="flex flex-col">
                 <?php if (UsersController::isAdminLogged()) : ?>
-                <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>cmw-admin" id="dropdownPlayer" data-dropdown-offset-distance=0 data-dropdown-toggle="dropdownPlayer" class="block cursor-pointer nav-a p-2"><i class="fa-solid fa-screwdriver-wrench"></i> Administration</a>
+                <a target="_blank" href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>cmw-admin" id="dropdownPlayer" data-dropdown-offset-distance=0 data-dropdown-toggle="dropdownPlayer" class="block cursor-pointer nav-a p-2"><i class="fa-solid fa-screwdriver-wrench"></i> Administration</a>
                 <?php endif; ?>
                 <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>profile" id="dropdownPlayer" data-dropdown-offset-distance=0 data-dropdown-toggle="dropdownPlayer" class="block cursor-pointer nav-a p-2"><i class="fa-regular fa-address-card"></i> Profil</a>
                 <?php if (PackageController::isInstalled("Shop")): ?>

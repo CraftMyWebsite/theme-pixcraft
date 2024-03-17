@@ -17,6 +17,9 @@ return [
     "website_font" => "roboto",
     "header_alert" => "0",
     "header_alert_text" => "PixCraft est vraiment un super thème <3",
+    "profile_broken" => "Config/Default/broken.png",
+    "maintenance_img" => "Config/Default/maintenance.png",
+    "404_img" => "Config/Default/404.png",
 
     /* - - - - - - - - 
        - - HOME - -
@@ -57,6 +60,26 @@ return [
     "feature_img_3" => "Config/Default/Img/feature3.webp",
     "feature_title_3" => "Réactif",
     "feature_description_3" => "Amet minim mollit non deserunt ullamco est sit aliqua",
+    /*JOIN SECTION*/
+    "join_section_active" => "1",
+    "join_ip" => "play.pixelcraft.fr",
+    "join_title" => "Nous rejoindre",
+    "join_step_1" => "Étape 1",
+    "join_icon_1" => "fa-solid fa-cube",
+    "join_title_1" => "Lance ton jeu",
+    "join_text_1" => "Nous autorisons les versions premium de la <b>1.18</b> à la <b>1.21</b>",
+    "join_step_2" => "Étape 2",
+    "join_icon_2" => "fa-solid fa-plus",
+    "join_title_2" => "Ajoute le serveur",
+    "join_text_2" => "Rends-toi dans <b>Multijoueur</b> puis clique sur <b>Nouveau serveur</b>",
+    "join_step_3" => "Étape 3",
+    "join_icon_3" => "fa-solid fa-keyboard",
+    "join_title_3" => "Saisis l'adresse",
+    "join_text_3" => "Renseigne l'adresse <b>play.pixcraft.fr</b> dans l'adresse du serveur.",
+    "join_step_4" => "Rejoins-Nous",
+    "join_icon_4" => "fa-solid fa-hand-holding-heart",
+    "join_title_4" => "Rejoins-Nous",
+    "join_text_4" => "Rejoins-nous et <b>passe un bon moment</b> sur PixCraft",
     /*NEWS SECTION*/
     "news_section_active" => "1",
     "news_section_title" => "Nouveautés",
