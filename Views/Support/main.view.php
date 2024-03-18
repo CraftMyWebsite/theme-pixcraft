@@ -43,9 +43,6 @@ Website::setDescription("Consultez les réponses de nos experts.");
                             <label for="support_is_public" class="ml-2 text-sm font-medium text-gray-900">Question publique</label>
                         </div>
                         <?php endif; ?>
-                        <div class="flex justify-center mt-4 mb-4">
-                            <?php SecurityController::getPublicData(); ?>
-                        </div>
                         <div>
                             <button type="submit" style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)" class="font-medium rounded px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2">Soumettre <i class="fa-solid fa-paper-plane"></i></button>
                         </div>

@@ -73,9 +73,6 @@ Website::setDescription("Consultez les réponses de nos experts.");
                                   class="input-focus block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-300"
                                   placeholder="Vous pouvez ..."></textarea>
                     </div>
-                    <div class="flex justify-center">
-                        <?php SecurityController::getPublicData(); ?>
-                    </div>
                     <div class="text-center">
                         <button type="submit" style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)" class="font-medium rounded px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2">Répondre <i class="fa-solid fa-comment"></i></button>
                     </div>
