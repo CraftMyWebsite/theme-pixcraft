@@ -68,7 +68,7 @@ Website::setDescription("Votez, obtenez des points de vote et plein d'autres cad
                         <td scope="row" class="flex items-center lg:px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             <img class="hidden lg:inline-block w-10 h-10" src="https://apiv2.craftmywebsite.fr/skins/3d/user=<?= $top->getUser()->getPseudo() ?>&headOnly=true" alt="...">
                             <div class="lg:pl-3 py-4">
-                                <div class="text-base font-semibold">Z0mblard</div>
+                                <div class="text-base font-semibold"><?= $top->getUser()->getPseudo() ?></div>
                             </div>
                         </td>
                         <td class="py-4 px-6 text-center">
