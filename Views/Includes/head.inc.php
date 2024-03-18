@@ -80,18 +80,18 @@ $siteName = Website::getWebsiteName();
         --bg-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('main_color')?>;
         --bg-pixcraft-features: #fafafa;
         --color-pixcraft-features: #494949;
-        --bg-pixcraft-head: #363232;
-        --bg-pixcraft-nav: #f3f3f3;
-        --bg-pixcraft-player: #807d7d;
-        --nav-color-pixcraft-player: #ffffff;
-        --nav-color-pixcraft-hover: #ffffff;
-        --head-color-pixcraft: #ffffff;
-        --nav-color-pixcraft: #262626;
-        --title-color-pixcraft: #ffffff;
-        --slider-duration: 1700ms;
-        --slider-color: #ffffff;
-        --flash-effect-color: #cbe722;
-        --flash-effect-duration: 0.5s;
+        --bg-pixcraft-head: <?= ThemeModel::getInstance()->fetchConfigValue('head_background_color')?>;
+        --bg-pixcraft-nav: <?= ThemeModel::getInstance()->fetchConfigValue('nav_background')?>;
+        --bg-pixcraft-player: <?= ThemeModel::getInstance()->fetchConfigValue('nav_player_name_background')?>;
+        --nav-color-pixcraft-player: <?= ThemeModel::getInstance()->fetchConfigValue('nav_player_name_color')?>;
+        --nav-color-pixcraft-hover: <?= ThemeModel::getInstance()->fetchConfigValue('nav_hover_text_color')?>;
+        --head-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('head_text_color')?>;
+        --nav-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('nav_text_color')?>;
+        --title-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('title_color')?>;
+        --slider-duration: <?= ThemeModel::getInstance()->fetchConfigValue('slider_transition_duration')?>ms;
+        --slider-color: <?= ThemeModel::getInstance()->fetchConfigValue('slider_text_color')?>;
+        --flash-effect-color: <?= ThemeModel::getInstance()->fetchConfigValue('header_alert_color')?>;
+        --flash-effect-duration: <?= ThemeModel::getInstance()->fetchConfigValue('header_alert_duration')?>s;
     }
 
 

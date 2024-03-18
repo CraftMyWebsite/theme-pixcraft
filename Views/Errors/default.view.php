@@ -8,7 +8,7 @@ Website::setTitle("Erreur");
 Website::setDescription("Erreur");
 ?>
 <section class="py-8 px-8 md:px-36 2xl:px-96">
-    <p class="text-center font-paytone text-6xl">{errorCode}</p>
+    <p class="text-center font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?> text-6xl">{errorCode}</p>
     <div class="lg:grid grid-cols-2">
         <div class="flex flex-col justify-center items-center space-y-6 font-bold">
             <p>Il semblerais qu'il y ai un problème !</p>

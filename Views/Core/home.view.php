@@ -33,8 +33,8 @@ Website::setDescription(Website::getWebsiteDescription());
                 <div style="transition-duration: var(--slider-duration)" class="hidden ease-in-out" data-carousel-item>
                     <img src="<?= ThemeModel::getInstance()->fetchImageLink("slider_img_1") ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     <div style="color: var(--slider-color)" class="absolute w-full mt-8 space-y-4 md:mt-44 md:space-y-11 text-center">
-                        <h1 class="text-2xl md:text-6xl font-thin font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('slider_title_1')?></h1>
-                        <h1 class="font-bold text-base md:text-2xl font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('slider_text_1')?></h1>
+                        <h1 class="text-2xl md:text-6xl font-thin font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('slider_title_1')?></h1>
+                        <h1 class="font-bold text-base md:text-2xl font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('slider_text_1')?></h1>
                     </div>
                 </div>
                 <?php endif; ?>
@@ -42,8 +42,8 @@ Website::setDescription(Website::getWebsiteDescription());
                 <div style="transition-duration: var(--slider-duration)" class="hidden ease-in-out" data-carousel-item>
                     <img src="<?= ThemeModel::getInstance()->fetchImageLink("slider_img_2") ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     <div style="color: var(--slider-color)" class="absolute w-full mt-8 space-y-4 md:mt-44 md:space-y-11 text-center">
-                        <h1 class="text-2xl md:text-6xl font-thin font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('slider_title_2')?></h1>
-                        <h1 class="font-bold text-base md:text-2xl font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('slider_text_2')?></h1>
+                        <h1 class="text-2xl md:text-6xl font-thin font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('slider_title_2')?></h1>
+                        <h1 class="font-bold text-base md:text-2xl font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('slider_text_2')?></h1>
                     </div>
                 </div>
                 <?php endif; ?>
@@ -51,8 +51,8 @@ Website::setDescription(Website::getWebsiteDescription());
                 <div style="transition-duration: var(--slider-duration)" class="hidden ease-in-out" data-carousel-item>
                     <img src="<?= ThemeModel::getInstance()->fetchImageLink("slider_img_3") ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     <div style="color: var(--slider-color)" class="absolute w-full mt-8 space-y-4 md:mt-44 md:space-y-11 text-center">
-                        <h1 class="text-2xl md:text-6xl font-thin font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('slider_title_3')?></h1>
-                        <h1 class="font-bold text-base md:text-2xl font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('slider_text_3')?></h1>
+                        <h1 class="text-2xl md:text-6xl font-thin font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('slider_title_3')?></h1>
+                        <h1 class="font-bold text-base md:text-2xl font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('slider_text_3')?></h1>
                     </div>
                 </div>
                 <?php endif; ?>
@@ -60,8 +60,8 @@ Website::setDescription(Website::getWebsiteDescription());
                 <div style="transition-duration: var(--slider-duration)" class="hidden ease-in-out" data-carousel-item>
                     <img src="<?= ThemeModel::getInstance()->fetchImageLink("slider_img_4") ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     <div style="color: var(--slider-color)" class="absolute w-full mt-8 space-y-4 md:mt-44 md:space-y-11 text-center">
-                        <h1 class="text-2xl md:text-6xl font-thin font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('slider_title_4')?></h1>
-                        <h1 class="font-bold text-base md:text-2xl font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('slider_text_4')?></h1>
+                        <h1 class="text-2xl md:text-6xl font-thin font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('slider_title_4')?></h1>
+                        <h1 class="font-bold text-base md:text-2xl font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('slider_text_4')?></h1>
                     </div>
                 </div>
                 <?php endif; ?>
@@ -69,8 +69,8 @@ Website::setDescription(Website::getWebsiteDescription());
                 <div style="transition-duration: var(--slider-duration)" class="hidden ease-in-out" data-carousel-item>
                     <img src="<?= ThemeModel::getInstance()->fetchImageLink("slider_img_5") ?>" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     <div style="color: var(--slider-color)" class="absolute w-full mt-8 space-y-4 md:mt-44 md:space-y-11 text-center">
-                        <h1 class="text-2xl md:text-6xl font-thin font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('slider_title_5')?></h1>
-                        <h1 class="font-bold text-base md:text-2xl font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('slider_text_5')?></h1>
+                        <h1 class="text-2xl md:text-6xl font-thin font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('slider_title_5')?></h1>
+                        <h1 class="font-bold text-base md:text-2xl font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('slider_text_5')?></h1>
                     </div>
                 </div>
                 <?php endif; ?>
@@ -109,7 +109,7 @@ Website::setDescription(Website::getWebsiteDescription());
 <?php if(ThemeModel::getInstance()->fetchConfigValue('feature_section_active')): ?>
     <section class="mt-9">
         <div class="title-divider text-center py-4 w-full">
-            <h2 class="font-paytone font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('feature_section_title') ?></h2>
+            <h2 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?> font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('feature_section_title') ?></h2>
         </div>
         <div class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
             <div class="lg:grid grid-cols-3 gap-32">
@@ -148,7 +148,7 @@ Website::setDescription(Website::getWebsiteDescription());
 <?php if(ThemeModel::getInstance()->fetchConfigValue('join_section_active')): ?>
     <section class="mt-9">
         <div class="title-divider text-center py-4 w-full">
-            <h2 class="font-paytone font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('join_title') ?></h2>
+            <h2 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?> font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('join_title') ?></h2>
         </div>
         <div class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
             <div class="lg:grid grid-cols-4 gap-8">
@@ -187,7 +187,7 @@ Website::setDescription(Website::getWebsiteDescription());
             </div>
             <div class="mt-8 w-fit mx-auto text-center">
                 <small>Clique pour copier :</small>
-                <h4 id="copyIp" onclick="copyURL('<?= ThemeModel::getInstance()->fetchConfigValue('join_ip') ?>')" class="w-fit mx-auto cursor-pointer uppercase font-paytone"><?= ThemeModel::getInstance()->fetchConfigValue('join_ip') ?></h4>
+                <h4 id="copyIp" onclick="copyURL('<?= ThemeModel::getInstance()->fetchConfigValue('join_ip') ?>')" class="w-fit mx-auto cursor-pointer uppercase font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>"><?= ThemeModel::getInstance()->fetchConfigValue('join_ip') ?></h4>
             </div>
         </div>
     </section>
@@ -197,7 +197,7 @@ Website::setDescription(Website::getWebsiteDescription());
 <?php if(ThemeModel::getInstance()->fetchConfigValue('news_section_active')): ?>
 <section class="mt-9">
     <div class="title-divider text-center py-4 w-full">
-        <h2 class="font-paytone font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('news_section_title') ?></h2>
+        <h2 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?> font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('news_section_title') ?></h2>
     </div>
     <div class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
         <div class="lg:grid grid-cols-2 gap-16">
@@ -252,7 +252,7 @@ Website::setDescription(Website::getWebsiteDescription());
 <?php if(ThemeModel::getInstance()->fetchConfigValue('custom_section_active_1')): ?>
     <section class="mt-9">
         <div class="title-divider text-center py-4 w-full">
-            <h2 class="font-paytone font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('custom_section_title_1') ?></h2>
+            <h2 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?> font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('custom_section_title_1') ?></h2>
         </div>
         <div class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
             <?= ThemeModel::getInstance()->fetchConfigValue('custom_section_content_1') ?>
@@ -264,7 +264,7 @@ Website::setDescription(Website::getWebsiteDescription());
 <?php if(ThemeModel::getInstance()->fetchConfigValue('custom_section_active_2')): ?>
     <section class="mt-9">
         <div class="title-divider text-center py-4 w-full">
-            <h2 class="font-paytone font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('custom_section_title_2') ?></h2>
+            <h2 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?> font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('custom_section_title_2') ?></h2>
         </div>
         <div class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
             <?= ThemeModel::getInstance()->fetchConfigValue('custom_section_content_2') ?>
@@ -276,7 +276,7 @@ Website::setDescription(Website::getWebsiteDescription());
 <?php if(ThemeModel::getInstance()->fetchConfigValue('custom_section_active_3')): ?>
     <section class="mt-9">
         <div class="title-divider text-center py-4 w-full">
-            <h2 class="font-paytone font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('custom_section_title_3') ?></h2>
+            <h2 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?> font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('custom_section_title_3') ?></h2>
         </div>
         <div class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
             <?= ThemeModel::getInstance()->fetchConfigValue('custom_section_content_3') ?>
@@ -289,7 +289,7 @@ Website::setDescription(Website::getWebsiteDescription());
     <?php if(ThemeModel::getInstance()->fetchConfigValue('contact_section_active')): ?>
 <section class="mt-9">
     <div class="title-divider text-center py-4 w-full">
-        <h2 class="font-paytone font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('contact_section_title') ?></h2>
+        <h2 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?> font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('contact_section_title') ?></h2>
     </div>
     <div class="lg:pb-8 px-8 md:px-36 2xl:px-96">
         <div class="mx-auto py-8 px-4">

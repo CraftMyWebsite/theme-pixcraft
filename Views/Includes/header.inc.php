@@ -1,9 +1,11 @@
 <?php
 
 use CMW\Controller\Core\PackageController;
+use CMW\Controller\Minecraft\MinecraftController;
 use CMW\Manager\Env\EnvManager;
 use CMW\Controller\Users\UsersController;
 use CMW\Model\Core\MenusModel;
+use CMW\Model\Minecraft\MinecraftModel;
 use CMW\Model\Shop\Cart\ShopCartModel;
 use CMW\Model\Shop\Cart\ShopCartItemModel;
 use CMW\Model\Users\UsersModel;
@@ -14,6 +16,15 @@ if (PackageController::isInstalled("Shop")) {
     $itemInCart = ShopCartItemModel::getInstance()->countItemsByUserId(UsersModel::getCurrentUser()?->getId(), session_id());
 }
 
+if (PackageController::isInstalled("Minecraft")) {
+    $mc = new minecraftModel;
+    $favExist = $mc->favExist();
+    if ($favExist) {
+        $minecraft = MinecraftController::pingServer($mc->getFavServer()->getServerIp(), $mc->getFavServer()->getServerPort())->getPlayersOnline();
+    }
+
+}
+
 $menus = MenusModel::getInstance();
 ?>
 
@@ -21,7 +32,13 @@ $menus = MenusModel::getInstance();
     <div class="flex justify-between">
         <p class="text-sm">
             <?php if (ThemeModel::getInstance()->fetchConfigValue('header_show_online')): ?>
-            <i class="fa-solid fa-user mr-1"></i><span class="mr-1 md:mr-7">0 connectés</span>
+                <?php if ($favExist): ?>
+                    <i class="fa-solid fa-user mr-1"></i><span class="mr-1 md:mr-7"><?= $minecraft ?> connectés</span>
+                <?php else: ?>
+                    <?php if (UsersController::isAdminLogged()) : ?>
+                    <span>Veuillez ajouter un serveur en favoris pour le voir apparaitre ici !</span>
+                    <?php endif; ?>
+                <?php endif; ?>
             <?php endif; ?>
             <?php if (ThemeModel::getInstance()->fetchConfigValue('header_show_members')): ?>
                 <span class="hidden md:inline"><?= UsersModel::getInstance()->countUsers() ?> inscrits</span>
@@ -42,7 +59,7 @@ $menus = MenusModel::getInstance();
 
 <section style="background-color: var(--bg-pixcraft-head); color: var(--head-color-pixcraft)" class="py-8 px-8 md:px-36 2xl:px-96">
     <div class="flex justify-between items-center">
-        <h3 class="font-paytone">
+        <h3 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>">
             <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>">
                 <?php if (ThemeModel::getInstance()->fetchConfigValue('header_active_logo')): ?>
                     <img class="hidden md:inline mr-2" alt="logo" width="60px" src="<?= ThemeModel::getInstance()->fetchImageLink("header_img_logo") ?>">
@@ -58,7 +75,7 @@ $menus = MenusModel::getInstance();
         <?php endif; ?>
         <?php if (UsersController::isUserLogged()): ?>
         <button id="dropdownDelayButton" data-dropdown-offset-distance=0 data-dropdown-toggle="dropdownPlayer" data-dropdown-delay="10" data-dropdown-trigger="hover" style="background-color: var(--bg-pixcraft-player); color: var(--nav-color-pixcraft-player)" class="py-2 px-4 rounded">
-            <img class="inline mr-2" alt="player head" width="30px" src="https://apiv2.craftmywebsite.fr/skins/3d/user=<?= UsersModel::getCurrentUser()->getPseudo() ?>&headOnly=true"> <?= UsersModel::getCurrentUser()->getPseudo() ?>
+            <img class="inline mr-2" loading="lazy" alt="player head" width="30px" src="https://apiv2.craftmywebsite.fr/skins/3d/user=<?= UsersModel::getCurrentUser()->getPseudo() ?>&headOnly=true"> <?= UsersModel::getCurrentUser()->getPseudo() ?>
         </button>
         <div id="dropdownPlayer" style="background-color: var(--bg-pixcraft-player); color: var(--nav-color-pixcraft-player); z-index: 500;" class="hidden shadow w-full md:w-52 rounded shadow">
             <div aria-labelledby="dropdownDelayButton" class="flex flex-col">

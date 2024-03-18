@@ -14,7 +14,7 @@ use CMW\Utils\Website;
 <footer style="background-color: var(--bg-pixcraft); color: var(--head-color-pixcraft)" class="mt-auto footer pt-6 px-2 md:px-24 2xl:px-72">
     <div class="md:grid grid-cols-3 mb-4 items-center">
         <div>
-            <h3 class="font-paytone">
+            <h3 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>">
                 <?php if (ThemeModel::getInstance()->fetchConfigValue('footer_use_logo')): ?>
                     <img class="hidden md:inline mr-2" alt="logo" width="120px" src="<?= ThemeModel::getInstance()->fetchImageLink("header_img_logo") ?>">
                 <?php endif; ?>
