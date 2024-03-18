@@ -217,6 +217,7 @@ Website::setDescription(Website::getWebsiteDescription());
                     <p class="text-justify"><?= $news->getDescription() ?></p>
                     <div class="flex justify-between mt-4">
                         <div class="cursor-pointer">
+                            <?php if ($news->isLikesStatus()): ?>
                                 <span data-tooltip-target="<?php if ($news->getLikes()->userCanLike()) {echo "tooltip-liked";} else {echo "tooltip-like";} ?>">
                                 <span class="text-base"><?= $news->getLikes()->getTotal() ?>
                                     <?php if ($news->getLikes()->userCanLike()): ?>
@@ -234,6 +235,7 @@ Website::setDescription(Website::getWebsiteDescription());
                                     <?php endif; ?>
                                 </span>
                                 </span>
+                            <?php endif; ?>
                         </div>
                         <a style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)" class="py-1 px-4 text-xs" href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>news/<?= $news->getSlug() ?>">Lire la suite ></a>
                     </div>

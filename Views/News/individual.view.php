@@ -20,6 +20,7 @@ Website::setDescription(ThemeModel::getInstance()->fetchConfigValue('news_descri
             </div>
             <div class="text-center p-2">
                 <div class="cursor-pointer">
+                    <?php if ($news->isLikesStatus()): ?>
                         <span data-tooltip-target="<?php if ($news->getLikes()->userCanLike()) {echo "tooltip-liked";} else {echo "tooltip-like";} ?>">
                         <span class="text-base"><?= $news->getLikes()->getTotal() ?>
                             <?php if ($news->getLikes()->userCanLike()): ?>
@@ -37,6 +38,7 @@ Website::setDescription(ThemeModel::getInstance()->fetchConfigValue('news_descri
                             <?php endif; ?>
                         </span>
                         </span>
+                    <?php endif; ?>
                 </div>
                 <a style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)" class="py-1 px-2 text-xs" href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>news"> < Revenir au news</a>
             </div>
@@ -57,6 +59,7 @@ Website::setDescription(ThemeModel::getInstance()->fetchConfigValue('news_descri
     </div>
 </section>
 
+<?php if ($news->isCommentsStatus()): ?>
 <section class="mt-8 pb-8 lg:pb-16 px-8 md:px-36 2xl:px-96">
     <div style="background-color: var(--bg-pixcraft-features); color: var(--color-pixcraft-features)" class="shadow-xl col-span-3 h-fit">
         <div class="page-title-divider text-center pt-1 w-full">
@@ -118,3 +121,4 @@ Website::setDescription(ThemeModel::getInstance()->fetchConfigValue('news_descri
         </div>
     </div>
 </section>
+<?php endif; ?>

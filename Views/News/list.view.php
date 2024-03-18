@@ -28,7 +28,9 @@ Website::setDescription(ThemeModel::getInstance()->fetchConfigValue('news_descri
                 <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>news/<?= $news->getSlug() ?>"><h5 class="text-center font-bold"><?= $news->getTitle() ?></h5></a>
                 <p class="text-justify text-sm"><?= $news->getDescription() ?></p>
                 <div class="flex justify-between items-center mt-4">
+
                     <div class="cursor-pointer">
+                        <?php if ($news->isLikesStatus()): ?>
                                 <span data-tooltip-target="<?php if ($news->getLikes()->userCanLike()) {echo "tooltip-liked";} else {echo "tooltip-like";} ?>">
                                 <span class="text-base"><?= $news->getLikes()->getTotal() ?>
                                     <?php if ($news->getLikes()->userCanLike()): ?>
@@ -46,6 +48,7 @@ Website::setDescription(ThemeModel::getInstance()->fetchConfigValue('news_descri
                                     <?php endif; ?>
                                 </span>
                                 </span>
+                        <?php endif; ?>
                     </div>
                     <a style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)" class="py-1 px-2 text-xs" href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>news/<?= $news->getSlug() ?>">Lire la suite ></a>
                 </div>
