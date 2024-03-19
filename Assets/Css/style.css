@@ -1777,11 +1777,71 @@ pre {
 .text-justify {
   text-align: justify;
 }
-.font-paytone {
-  font-family: paytone;
+.font-angkor {
+  font-family: angkor;
+}
+.font-ibmplexsans {
+  font-family: ibmplexsans;
+}
+.font-kanit {
+  font-family: kanit;
+}
+.font-lora {
+  font-family: lora;
+}
+.font-madimione {
+  font-family: madimione;
+}
+.font-ojuju {
+  font-family: ojuju;
+}
+.font-opensans {
+  font-family: opensans;
+}
+.font-playfairdisplay {
+  font-family: playfairdisplay;
+}
+.font-robotocondensed {
+  font-family: robotocondensed;
+}
+.font-robotomono {
+  font-family: robotomono;
+}
+.font-robotoslab {
+  font-family: robotoslab;
+}
+.font-rubik {
+  font-family: rubik;
+}
+.font-ubuntu {
+  font-family: ubuntu;
 }
 .font-roboto {
   font-family: roboto;
+}
+.font-unbounded {
+  font-family: unbounded;
+}
+.font-montserrat {
+  font-family: montserrat;
+}
+.font-paytone {
+  font-family: paytone;
+}
+.font-sora {
+  font-family: sora;
+}
+.font-outfit {
+  font-family: outfit;
+}
+.font-alata {
+  font-family: alata;
+}
+.font-titan {
+  font-family: titan;
+}
+.font-pressstart {
+  font-family: pressstart;
 }
 .text-xl {
   font-size: 1.25rem;

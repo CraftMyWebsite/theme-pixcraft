@@ -14,6 +14,7 @@ return [
     "global_no_register_message" => "Nous somme désolé mais les inscriptions sont pour le moment désactiver.",
     "slider_interval" => "5000",
     "slider_transition_duration" => "1700",
+    "slider_blur" => "3",
     "slider_text_color" => "#ffffff",
     "main_color" => "#A32E34",
     "title_color" => "#ffffff",

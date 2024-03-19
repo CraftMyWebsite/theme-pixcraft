@@ -92,6 +92,7 @@ $siteName = Website::getWebsiteName();
         --slider-color: <?= ThemeModel::getInstance()->fetchConfigValue('slider_text_color')?>;
         --flash-effect-color: <?= ThemeModel::getInstance()->fetchConfigValue('header_alert_color')?>;
         --flash-effect-duration: <?= ThemeModel::getInstance()->fetchConfigValue('header_alert_duration')?>s;
+        --slider-blur: <?= ThemeModel::getInstance()->fetchConfigValue('slider_blur')?>px;
     }
 
 
@@ -253,7 +254,7 @@ $siteName = Website::getWebsiteName();
     }
 
     [data-carousel-item] img {
-        filter: blur(3px);
+        filter: blur(var(--slider-blur));
     }
 
     @media (max-width: 768px) {

@@ -444,19 +444,25 @@
                     <label class="form-check-label" for="home_use_slider"><h6>Slider : <i data-bs-toggle="tooltip" title="Vous pouvez activer ou non cette section." class="fa-sharp fa-solid fa-circle-question"></i></h6></label>
                 </div>
                 <div class="row mt-2">
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-3">
                         <div>
                             <label for="hero_button_link">Temps entre chaque image (ms):</label>
                             <input class="form-control" type="text" id="hero_button_link" name="slider_interval" value="<?= ThemeModel::getInstance()->fetchConfigValue('slider_interval') ?>">
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-3">
                         <div>
                             <label for="hero_button_link">Durée de la transition (ms):</label>
                             <input class="form-control" type="text" id="hero_button_link" name="slider_transition_duration" value="<?= ThemeModel::getInstance()->fetchConfigValue('slider_transition_duration') ?>">
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4">
+                    <div class="col-12 col-lg-3">
+                        <div>
+                            <label for="hero_button_link">Flou:</label>
+                            <input class="form-control" type="text" id="slider_blur" name="slider_blur" value="<?= ThemeModel::getInstance()->fetchConfigValue('slider_blur') ?>">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
                         <div class="d-flex items-center">
                             <input type="color" id="slider_text_color" name="slider_text_color" value="<?= ThemeModel::getInstance()->fetchConfigValue('slider_text_color') ?>">
                             <label style="margin-left: 0.5rem" for="slider_text_color">Couleur du texte dans le slider.</label>
