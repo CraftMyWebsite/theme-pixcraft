@@ -22,8 +22,8 @@ Website::setDescription("Inscrivez-vous");
                 <div class="lg:grid grid-cols-2 gap-6">
                     <div>
                         <div>
-                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Mail</label>
-                            <input name="login_email" type="email" class="input-focus bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="mail@craftmywebsite.fr" required>
+                            <label for="register_email" class="block mb-2 text-sm font-medium text-gray-900">Mail</label>
+                            <input id="register_email" name="register_email" type="email" class="input-focus bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="mail@craftmywebsite.fr" required>
                         </div>
                         <div>
                             <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Mot de passe</label>
@@ -35,8 +35,8 @@ Website::setDescription("Inscrivez-vous");
                     </div>
                     <div>
                         <div>
-                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Pseudo minecraft</label>
-                            <input name="register_pseudo" type="text" class="input-focus bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Pseudo" required>
+                            <label for="register_pseudo" class="block mb-2 text-sm font-medium text-gray-900">Pseudo minecraft</label>
+                            <input id="register_pseudo" name="register_pseudo" type="text" class="input-focus bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Pseudo" required>
                         </div>
                         <div>
                             <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Confirmation</label>
