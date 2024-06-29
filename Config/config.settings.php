@@ -65,13 +65,13 @@ return [
     /*FEATURE SECTION*/
     "feature_section_active" => "1",
     "feature_section_title" => "Fonctionnalités",
-    "feature_img_1" => "Config/Default/Img/feature1.webp",
+    "feature_img_1" => "Config/Default/feature1.webp",
     "feature_title_1" => "Communauté",
     "feature_description_1" => "Amet minim mollit non deserunt ullamco est sit aliqua",
-    "feature_img_2" => "Config/Default/Img/feature2.webp",
+    "feature_img_2" => "Config/Default/feature2.webp",
     "feature_title_2" => "Savoir faire",
     "feature_description_2" => "Amet minim mollit non deserunt ullamco est sit aliqua",
-    "feature_img_3" => "Config/Default/Img/feature3.webp",
+    "feature_img_3" => "Config/Default/feature3.webp",
     "feature_title_3" => "Réactif",
     "feature_description_3" => "Amet minim mollit non deserunt ullamco est sit aliqua",
     /*JOIN SECTION*/
