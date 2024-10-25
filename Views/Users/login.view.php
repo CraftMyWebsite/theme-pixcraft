@@ -6,6 +6,8 @@ use CMW\Controller\Core\SecurityController;
 use CMW\Manager\Security\SecurityManager;
 use CMW\Utils\Website;
 
+/* @var \CMW\Interface\Users\IUsersOAuth[] $oAuths */
+
 Website::setTitle("Connexion");
 Website::setDescription("Connectez-vous sur " . Website::getWebsiteName());
 ?>
@@ -42,6 +44,22 @@ Website::setDescription("Connectez-vous sur " . Website::getWebsiteName());
                 </div>
                 <button style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)" type="submit" class="w-full rounded text-sm px-5 py-2.5 text-center">Connexion</button>
             </form>
+            <div class="flex flex-no-wrap justify-center items-center py-4">
+                <div class="px-10 w-auto">
+                    <p class="font-medium">Se connecter avec</p>
+                </div>
+            </div>
+            <div class="px-4 py-2 justify-center text-center w-full sm:w-auto">
+                <div class="flex-wrap inline-flex space-x-3">
+                    <?php foreach ($oAuths as $oAuth): ?>
+                        <a href="oauth/<?= $oAuth->methodIdentifier() ?>" class="hover:text-blue-600"
+                           aria-label="<?= $oAuth->methodeName() ?>">
+                            <img src="<?= $oAuth->methodeIconLink() ?>"
+                                 alt="<?= $oAuth->methodeName() ?>" width="32" height="32"/>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+            </div>
             <label class="block text-sm text-gray-900 mt-4">Pas encore de comtpe, <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>register" class="text-blue-500">s'enregistrer</a></label>
         </div>
     </div>
