@@ -2479,6 +2479,9 @@ pre {
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
+    .lg\:w-96 {
+        width: 24rem;
+    }
 
   .lg\:mb-4 {
     margin-bottom: 1rem;
