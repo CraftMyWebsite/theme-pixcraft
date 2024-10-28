@@ -113,6 +113,11 @@ return [
     "custom_section_active_3" => "0",
     "custom_section_title_3" => "Titre personnalisé 3",
     "custom_section_content_3" => "<h1>Personnalise moi</h1> <br> <p>Comme du code HTML !</p>",
+    /* NEWSLETTER SECTION */
+    'newsletter_section_active' => '1',
+    'newsletter_section_title' => 'NewsLetter',
+    'newsletter_section_description' => 'Abonnez-vous à notre newsletter pour ne louper aucune news !',
+    'newsletter_section_button' => 'S\'abonner !',
 
     /* - - - - - - - - 
        - - NEWS - -

@@ -329,6 +329,32 @@ Website::setDescription(Website::getWebsiteDescription());
     <?php endif; ?>
 <?php endif; ?>
 
+<?php if (PackageController::isInstalled('Newsletter')): ?>
+<?php if (ThemeModel::getInstance()->fetchConfigValue('newsletter_section_active')): ?>
+<section class="mt-9">
+    <div class="title-divider text-center py-4 w-full">
+        <h2 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?> font-semibold text-2xl uppercase text-white"><?= ThemeModel::getInstance()->fetchConfigValue('newsletter_section_title') ?></h2>
+    </div>
+    <div class="lg:pb-8 px-8 md:px-36 2xl:px-96">
+        <div class="mx-auto py-8 px-4">
+            <form action="newsletter" method="post" class="rounded-md p-8">
+                <?php (new SecurityManager())->insertHiddenToken() ?>
+                <?= ThemeModel::getInstance()->fetchConfigValue('newsletter_section_description') ?>
+                <div class="px-4 w-full">
+                    <input type="email" name="newsletter_users_mail" id="email-address-icon" class="input-focus bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded block w-full p-2.5" placeholder="votre@mail.com" required>
+                </div>
+                <div class="flex justify-center mt-4">
+                    <?php SecurityController::getPublicData(); ?>
+                </div>
+                <div class="text-center mt-4">
+                    <button type="submit" style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)" class="font-medium rounded px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2"><?= ThemeModel::getInstance()->fetchConfigValue('newsletter_section_button') ?></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+    <?php endif; ?>
+<?php endif; ?>
 
 
 <link rel="stylesheet"
