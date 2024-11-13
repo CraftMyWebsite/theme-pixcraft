@@ -24,7 +24,7 @@ Website::setDescription("Recherchez un sujet dans le forum");
         <div class="flex">
             <div class="relative w-full">
                 <form action="<?= EnvManager::getInstance()->getValue('PATH_SUBFOLDER')?>forum/search" method="POST">
-                    <?php (new SecurityManager())->insertHiddenToken() ?>
+                    <?php SecurityManager::getInstance()->insertHiddenToken() ?>
                     <input type="text" name="for"
                            class="block p-1 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg border-gray-100 border-l-2 border border-gray-300 input-focus"
                            placeholder="Rechercher">

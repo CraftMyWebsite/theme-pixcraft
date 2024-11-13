@@ -19,7 +19,7 @@ Website::setDescription(ThemeModel::getInstance()->fetchConfigValue('faq_descrip
                 </div>
                 <div class="p-4">
                     <form action="contact" method="post">
-                        <?php (new SecurityManager())->insertHiddenToken() ?>
+                        <?php SecurityManager::getInstance()->insertHiddenToken() ?>
                         <div class="px-4 w-full">
                             <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900">Votre mail :</label>
                             <input type="email" name="email" id="email-address-icon" class="input-focus bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded block w-full p-2.5" placeholder="votre@mail.com" required>
