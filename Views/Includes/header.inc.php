@@ -2,18 +2,18 @@
 
 use CMW\Controller\Core\PackageController;
 use CMW\Controller\Minecraft\MinecraftController;
+use CMW\Controller\Users\UsersSessionsController;
 use CMW\Manager\Env\EnvManager;
 use CMW\Controller\Users\UsersController;
 use CMW\Model\Core\MenusModel;
 use CMW\Model\Minecraft\MinecraftModel;
-use CMW\Model\Shop\Cart\ShopCartModel;
 use CMW\Model\Shop\Cart\ShopCartItemModel;
 use CMW\Model\Users\UsersModel;
 use CMW\Model\Core\ThemeModel;
 use CMW\Utils\Website;
 
 if (PackageController::isInstalled("Shop")) {
-    $itemInCart = ShopCartItemModel::getInstance()->countItemsByUserId(UsersModel::getCurrentUser()?->getId(), session_id());
+    $itemInCart = ShopCartItemModel::getInstance()->countItemsByUserId(UsersSessionsController::getInstance()->getCurrentUser()?->getId(), session_id());
 }
 
 if (PackageController::isInstalled("Minecraft")) {
@@ -75,7 +75,7 @@ $menus = MenusModel::getInstance();
         <?php endif; ?>
         <?php if (UsersController::isUserLogged()): ?>
         <button id="dropdownDelayButton" data-dropdown-offset-distance=0 data-dropdown-toggle="dropdownPlayer" data-dropdown-delay="10" data-dropdown-trigger="hover" style="background-color: var(--bg-pixcraft-player); color: var(--nav-color-pixcraft-player)" class="py-2 px-4 rounded">
-            <img class="inline mr-2" loading="lazy" alt="player head" width="30px" src="https://apiv2.craftmywebsite.fr/skins/3d/user=<?= UsersModel::getCurrentUser()->getPseudo() ?>&headOnly=true"> <?= UsersModel::getCurrentUser()->getPseudo() ?>
+            <img class="inline mr-2" loading="lazy" alt="player head" width="30px" src="https://apiv2.craftmywebsite.fr/skins/3d/user=<?= UsersSessionsController::getInstance()->getCurrentUser()->getPseudo() ?>&headOnly=true"> <?= UsersSessionsController::getInstance()->getCurrentUser()->getPseudo() ?>
         </button>
         <div id="dropdownPlayer" style="background-color: var(--bg-pixcraft-player); color: var(--nav-color-pixcraft-player); z-index: 500;" class="hidden shadow w-full md:w-52 rounded shadow">
             <div aria-labelledby="dropdownDelayButton" class="flex flex-col">
