@@ -31,27 +31,23 @@ $menus = MenusModel::getInstance();
 <section style="background-color: var(--bg-pixcraft); color: var(--head-color-pixcraft)" class="py-2 px-2 md:px-24 2xl:px-72">
     <div class="flex justify-between">
         <p class="text-sm">
-            <?php if (ThemeModel::getInstance()->fetchConfigValue('header_show_online')): ?>
+            <span data-cmw-visible="header:header_show_online">
                 <?php if ($favExist): ?>
                     <i class="fa-solid fa-user mr-1"></i><span class="mr-1 md:mr-7"><?= $minecraft ?> connectés</span>
                 <?php else: ?>
                     <?php if (UsersController::isAdminLogged()) : ?>
-                    <span>Veuillez ajouter un serveur en favoris pour le voir apparaitre ici !</span>
+                        <span>Veuillez ajouter un serveur en favoris pour le voir apparaitre ici !</span>
                     <?php endif; ?>
                 <?php endif; ?>
-            <?php endif; ?>
-            <?php if (ThemeModel::getInstance()->fetchConfigValue('header_show_members')): ?>
+            </span>
+            <span data-cmw-visible="header:header_show_members">
                 <span class="hidden md:inline"><?= UsersModel::getInstance()->countUsers() ?> inscrits</span>
-            <?php endif; ?>
+            </span>
         </p>
         <?php if (!UsersController::isUserLogged()): ?>
             <p class="text-sm">
-                <?php if (ThemeModel::getInstance()->fetchConfigValue('header_allow_login_button')): ?>
-                <a class="head-a mr-1 md:mr-7" href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>login"><i class="fa-solid fa-lock mr-1"></i> Se connecter</a>
-                <?php endif; ?>
-                <?php if (ThemeModel::getInstance()->fetchConfigValue('header_allow_register_button')): ?>
-                <a class="head-a" href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>register">S'inscrire</a>
-                <?php endif; ?>
+                <a data-cmw-visible="header:header_allow_login_button" class="head-a mr-1 md:mr-7" href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>login"><i class="fa-solid fa-lock mr-1"></i> Se connecter</a>
+                <a data-cmw-visible="header:header_allow_register_button" class="head-a" href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>register">S'inscrire</a>
             </p>
         <?php endif; ?>
     </div>
@@ -59,20 +55,14 @@ $menus = MenusModel::getInstance();
 
 <section style="background-color: var(--bg-pixcraft-head); color: var(--head-color-pixcraft)" class="py-8 px-8 md:px-36 2xl:px-96">
     <div class="flex justify-between items-center">
-        <h3 class="font-<?= ThemeModel::getInstance()->fetchConfigValue('website_secondary_font') ?>">
+        <h3 data-cmw-class="global:website_secondary_font">
             <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>">
-                <?php if (ThemeModel::getInstance()->fetchConfigValue('header_active_logo')): ?>
-                    <img class="hidden md:inline mr-2" alt="logo" width="60px" src="<?= ThemeModel::getInstance()->fetchImageLink("header_img_logo") ?>">
-                <?php endif; ?>
-                <?php if (ThemeModel::getInstance()->fetchConfigValue('header_active_title')): ?>
-                    <?= Website::getWebsiteName() ?>
-                <?php endif; ?></a>
+                    <img data-cmw-visible="header:header_active_logo" class="hidden md:inline mr-2" alt="logo" data-cmw-style="width:header:site_image_width" data-cmw-attr="src:header:header_img_logo"">
+                    <span data-cmw-visible="header:header_active_title"><?= Website::getWebsiteName() ?></span></a>
         </h3>
-        <?php if (ThemeModel::getInstance()->fetchConfigValue('header_alert')): ?>
-            <div class="px-16 hidden md:inline">
-                <p class="flash-effect"><?= ThemeModel::getInstance()->fetchConfigValue('header_alert_text')?></p>
+            <div data-cmw-visible="alert:header_alert" class="px-16 hidden md:inline">
+                <p class="flash-effect" data-cmw="alert:header_alert_text"></p>
             </div>
-        <?php endif; ?>
         <?php if (UsersController::isUserLogged()): ?>
         <div class="inline-flex align-baseline">
         <button id="dropdownDelayButton" data-dropdown-offset-distance=0 data-dropdown-toggle="dropdownPlayer" data-dropdown-delay="10" data-dropdown-trigger="hover" style="background-color: var(--bg-pixcraft-player); color: var(--nav-color-pixcraft-player)" class="py-2 px-4 rounded">

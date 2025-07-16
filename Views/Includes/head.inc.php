@@ -60,7 +60,7 @@ $siteName = Website::getWebsiteName();
 
 </head>
 
-<script>let intervalCar = <?= ThemeModel::getInstance()->fetchConfigValue('slider_interval')?></script>
+<script>let intervalCar =  <?= ThemeModel::getInstance()->fetchConfigValue('home-slider','slider_interval')?></script>
 
 <style>
     @font-face {  font-family: angkor;  src:url("<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>Public/Themes/Pixcraft/Assets/Webfonts/Angkor-Regular.ttf");  }
@@ -87,22 +87,22 @@ $siteName = Website::getWebsiteName();
     @font-face {  font-family: pressstart;  src:url("<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>Public/Themes/Pixcraft/Assets/Webfonts/PressStart2P-Regular.ttf");  }
 
     :root {
-        --bg-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('main_color')?>;
+        --bg-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','main_color')?>;
         --bg-pixcraft-features: #fafafa;
         --color-pixcraft-features: #494949;
-        --bg-pixcraft-head: <?= ThemeModel::getInstance()->fetchConfigValue('head_background_color')?>;
-        --bg-pixcraft-nav: <?= ThemeModel::getInstance()->fetchConfigValue('nav_background')?>;
-        --bg-pixcraft-player: <?= ThemeModel::getInstance()->fetchConfigValue('nav_player_name_background')?>;
-        --nav-color-pixcraft-player: <?= ThemeModel::getInstance()->fetchConfigValue('nav_player_name_color')?>;
-        --nav-color-pixcraft-hover: <?= ThemeModel::getInstance()->fetchConfigValue('nav_hover_text_color')?>;
-        --head-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('head_text_color')?>;
-        --nav-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('nav_text_color')?>;
-        --title-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('title_color')?>;
-        --slider-duration: <?= ThemeModel::getInstance()->fetchConfigValue('slider_transition_duration')?>ms;
-        --slider-color: <?= ThemeModel::getInstance()->fetchConfigValue('slider_text_color')?>;
-        --flash-effect-color: <?= ThemeModel::getInstance()->fetchConfigValue('header_alert_color')?>;
-        --flash-effect-duration: <?= ThemeModel::getInstance()->fetchConfigValue('header_alert_duration')?>s;
-        --slider-blur: <?= ThemeModel::getInstance()->fetchConfigValue('slider_blur')?>px;
+        --bg-pixcraft-head: <?= ThemeModel::getInstance()->fetchConfigValue('global','head_background_color')?>;
+        --bg-pixcraft-nav: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_background')?>;
+        --bg-pixcraft-player: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_player_name_background')?>;
+        --nav-color-pixcraft-player: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_player_name_color')?>;
+        --nav-color-pixcraft-hover: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_hover_text_color')?>;
+        --head-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','head_text_color')?>;
+        --nav-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_text_color')?>;
+        --title-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','title_color')?>;
+        --slider-duration: <?= ThemeModel::getInstance()->fetchConfigValue('global','slider_transition_duration')?>ms;
+        --slider-color: <?= ThemeModel::getInstance()->fetchConfigValue('global','slider_text_color')?>;
+        --flash-effect-color: <?= ThemeModel::getInstance()->fetchConfigValue('global','header_alert_color')?>;
+        --flash-effect-duration: <?= ThemeModel::getInstance()->fetchConfigValue('global','header_alert_duration')?>s;
+        --slider-blur: <?= ThemeModel::getInstance()->fetchConfigValue('global','slider_blur')?>px;
     }
 
 
@@ -302,7 +302,7 @@ $siteName = Website::getWebsiteName();
     }
 </style>
 
-<body class="bg-white text-gray-600 font-<?= ThemeModel::getInstance()->fetchConfigValue('website_font') ?> flex flex-col min-h-screen">
+<body data-cmw-class="global:website_font" class="bg-white text-gray-600 flex flex-col min-h-screen">
 
 <?php
 View::loadInclude($includes, "beforeScript");

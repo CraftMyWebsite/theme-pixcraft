@@ -44,6 +44,15 @@ return [
                 type: EditorType::IMAGE
             ),
             new EditorValue(
+                title: 'Taille du logo',
+                themeKey: 'site_image_width',
+                defaultValue: '60',
+                type: EditorType::RANGE,
+                rangeOptions: [
+                    new EditorRangeOptions(min: 0, max: 256,step: 1,suffix: 'px')
+                ]
+            ),
+            new EditorValue(
                 title: 'Autoriser les enregistrement',
                 themeKey: 'header_allow_register_button',
                 defaultValue: '1',
@@ -132,28 +141,7 @@ return [
                     new EditorSelectOptions(value: 'font-alata', text: 'alata'),
                     new EditorSelectOptions(value: 'font-titan', text: 'titan'),
                     new EditorSelectOptions(value: 'font-pressstart', text: 'pressstart'),
-                    new EditorSelectOptions(value: 'font-abrilfatface', text: 'abrilfatface'),
-                    new EditorSelectOptions(value: 'font-afacadflux', text: 'afacadflux'),
-                    new EditorSelectOptions(value: 'font-amaticsc', text: 'amaticsc'),
-                    new EditorSelectOptions(value: 'font-archivo', text: 'archivo'),
-                    new EditorSelectOptions(value: 'font-cabin', text: 'cabin'),
-                    new EditorSelectOptions(value: 'font-caveat', text: 'caveat'),
-                    new EditorSelectOptions(value: 'font-concretone', text: 'concretone'),
-                    new EditorSelectOptions(value: 'font-crimsonpro', text: 'crimsonpro'),
-                    new EditorSelectOptions(value: 'font-exo2', text: 'exo2'),
-                    new EditorSelectOptions(value: 'font-lato', text: 'lato'),
-                    new EditorSelectOptions(value: 'font-lobster', text: 'lobster'),
-                    new EditorSelectOptions(value: 'font-marcellus', text: 'marcellus'),
-                    new EditorSelectOptions(value: 'font-merriweather', text: 'merriweather'),
-                    new EditorSelectOptions(value: 'font-noto', text: 'noto'),
-                    new EditorSelectOptions(value: 'font-oleo', text: 'oleo'),
-                    new EditorSelectOptions(value: 'font-playwriteausa', text: 'playwriteausa'),
-                    new EditorSelectOptions(value: 'font-playwrite', text: 'playwrite'),
-                    new EditorSelectOptions(value: 'font-pt', text: 'pt'),
-                    new EditorSelectOptions(value: 'font-quicksand', text: 'quicksand'),
-                    new EditorSelectOptions(value: 'font-satisfy', text: 'satisfy'),
-                    new EditorSelectOptions(value: 'font-silkscreen', text: 'silkscreen'),
-                ]
+                    ]
             ),
             new EditorValue(
                 title: 'Police d\'écriture secondaire',
@@ -183,28 +171,7 @@ return [
                     new EditorSelectOptions(value: 'font-alata', text: 'alata'),
                     new EditorSelectOptions(value: 'font-titan', text: 'titan'),
                     new EditorSelectOptions(value: 'font-pressstart', text: 'pressstart'),
-                    new EditorSelectOptions(value: 'font-abrilfatface', text: 'abrilfatface'),
-                    new EditorSelectOptions(value: 'font-afacadflux', text: 'afacadflux'),
-                    new EditorSelectOptions(value: 'font-amaticsc', text: 'amaticsc'),
-                    new EditorSelectOptions(value: 'font-archivo', text: 'archivo'),
-                    new EditorSelectOptions(value: 'font-cabin', text: 'cabin'),
-                    new EditorSelectOptions(value: 'font-caveat', text: 'caveat'),
-                    new EditorSelectOptions(value: 'font-concretone', text: 'concretone'),
-                    new EditorSelectOptions(value: 'font-crimsonpro', text: 'crimsonpro'),
-                    new EditorSelectOptions(value: 'font-exo2', text: 'exo2'),
-                    new EditorSelectOptions(value: 'font-lato', text: 'lato'),
-                    new EditorSelectOptions(value: 'font-lobster', text: 'lobster'),
-                    new EditorSelectOptions(value: 'font-marcellus', text: 'marcellus'),
-                    new EditorSelectOptions(value: 'font-merriweather', text: 'merriweather'),
-                    new EditorSelectOptions(value: 'font-noto', text: 'noto'),
-                    new EditorSelectOptions(value: 'font-oleo', text: 'oleo'),
-                    new EditorSelectOptions(value: 'font-playwriteausa', text: 'playwriteausa'),
-                    new EditorSelectOptions(value: 'font-playwrite', text: 'playwrite'),
-                    new EditorSelectOptions(value: 'font-pt', text: 'pt'),
-                    new EditorSelectOptions(value: 'font-quicksand', text: 'quicksand'),
-                    new EditorSelectOptions(value: 'font-satisfy', text: 'satisfy'),
-                    new EditorSelectOptions(value: 'font-silkscreen', text: 'silkscreen'),
-                ]
+                    ]
             ),
             new EditorValue(
                 title: 'Couleur principale',
@@ -1078,6 +1045,18 @@ return [
         scope: null,
         requiredPackage: null,
         values: [
+            new EditorValue(
+                title: 'Logo',
+                themeKey: 'footer_use_logo',
+                defaultValue: '1',
+                type: EditorType::BOOLEAN,
+            ),
+            new EditorValue(
+                title: 'Nom du site',
+                themeKey: 'footer_use_title',
+                defaultValue: '1',
+                type: EditorType::BOOLEAN,
+            ),
             new EditorValue(
                 title: 'Liens dans un nouvel onglet',
                 themeKey: 'footer_open_link_new_tab',
