@@ -32,7 +32,7 @@ return [
                 type: EditorType::BOOLEAN,
             ),
             new EditorValue(
-                title: 'Autoriser les connectés',
+                title: 'Afficher les connectés',
                 themeKey: 'header_show_online',
                 defaultValue: '1',
                 type: EditorType::BOOLEAN,
@@ -248,7 +248,7 @@ return [
         ]
     ),
     new EditorMenu(
-        title: 'Home : Slider',
+        title: 'Accueil - Slider',
         key: 'home-slider',
         scope: null,
         requiredPackage: null,
@@ -412,7 +412,7 @@ return [
         ]
     ),
     new EditorMenu(
-        title: 'Home : Fonctionnalité',
+        title: 'Accueil - Fonctionnalité',
         key: 'home-feature',
         scope: null,
         requiredPackage: null,
@@ -486,7 +486,7 @@ return [
         ]
     ),
     new EditorMenu(
-        title: 'Home : Rejoindre',
+        title: 'Accueil - Rejoindre',
         key: 'home-join',
         scope: null,
         requiredPackage: null,

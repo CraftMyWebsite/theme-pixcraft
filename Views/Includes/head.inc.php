@@ -98,11 +98,11 @@ $siteName = Website::getWebsiteName();
         --head-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','head_text_color')?>;
         --nav-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_text_color')?>;
         --title-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','title_color')?>;
-        --slider-duration: <?= ThemeModel::getInstance()->fetchConfigValue('global','slider_transition_duration')?>ms;
-        --slider-color: <?= ThemeModel::getInstance()->fetchConfigValue('global','slider_text_color')?>;
-        --flash-effect-color: <?= ThemeModel::getInstance()->fetchConfigValue('global','header_alert_color')?>;
-        --flash-effect-duration: <?= ThemeModel::getInstance()->fetchConfigValue('global','header_alert_duration')?>s;
-        --slider-blur: <?= ThemeModel::getInstance()->fetchConfigValue('global','slider_blur')?>px;
+        --slider-duration: <?= ThemeModel::getInstance()->fetchConfigValue('home-slider','slider_transition_duration')?>ms;
+        --slider-color: <?= ThemeModel::getInstance()->fetchConfigValue('home-slider','slider_text_color')?>;
+        --flash-effect-color: <?= ThemeModel::getInstance()->fetchConfigValue('alert','header_alert_color')?>;
+        --flash-effect-duration: <?= ThemeModel::getInstance()->fetchConfigValue('alert','header_alert_duration')?>s;
+        --slider-blur: <?= ThemeModel::getInstance()->fetchConfigValue('home-slider','slider_blur')?>px;
     }
 
 
