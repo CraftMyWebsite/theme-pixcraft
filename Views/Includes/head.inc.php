@@ -87,22 +87,22 @@ $siteName = Website::getWebsiteName();
     @font-face {  font-family: pressstart;  src:url("<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>Public/Themes/Pixcraft/Assets/Webfonts/PressStart2P-Regular.ttf");  }
 
     :root {
-        --bg-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','main_color')?>;
+        --bg-pixcraft: /*cmw:global:main_color*/;
         --bg-pixcraft-features: #fafafa;
         --color-pixcraft-features: #494949;
-        --bg-pixcraft-head: <?= ThemeModel::getInstance()->fetchConfigValue('global','head_background_color')?>;
-        --bg-pixcraft-nav: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_background')?>;
-        --bg-pixcraft-player: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_player_name_background')?>;
-        --nav-color-pixcraft-player: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_player_name_color')?>;
-        --nav-color-pixcraft-hover: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_hover_text_color')?>;
-        --head-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','head_text_color')?>;
-        --nav-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','nav_text_color')?>;
-        --title-color-pixcraft: <?= ThemeModel::getInstance()->fetchConfigValue('global','title_color')?>;
-        --slider-duration: <?= ThemeModel::getInstance()->fetchConfigValue('home-slider','slider_transition_duration')?>ms;
-        --slider-color: <?= ThemeModel::getInstance()->fetchConfigValue('home-slider','slider_text_color')?>;
-        --flash-effect-color: <?= ThemeModel::getInstance()->fetchConfigValue('alert','header_alert_color')?>;
-        --flash-effect-duration: <?= ThemeModel::getInstance()->fetchConfigValue('alert','header_alert_duration')?>s;
-        --slider-blur: <?= ThemeModel::getInstance()->fetchConfigValue('home-slider','slider_blur')?>px;
+        --bg-pixcraft-head: /*cmw:global:head_background_color*/;
+        --bg-pixcraft-nav: /*cmw:global:nav_background*/;
+        --bg-pixcraft-player: /*cmw:global:nav_player_name_background*/;
+        --nav-color-pixcraft-player: /*cmw:global:nav_player_name_color*/;
+        --nav-color-pixcraft-hover: /*cmw:global:nav_hover_text_color*/;
+        --head-color-pixcraft: /*cmw:global:head_text_color*/;
+        --nav-color-pixcraft: /*cmw:global:nav_text_color*/;
+        --title-color-pixcraft: /*cmw:global:title_color*/;
+        --slider-duration: /*cmw:home-slider:slider_transition_duration*/ms;
+        --slider-color: /*cmw:home-slider:slider_text_color*/;
+        --flash-effect-color: /*cmw:alert:header_alert_color*/;
+        --flash-effect-duration: /*cmw:alert:header_alert_duration*/s;
+        --slider-blur: /*cmw:home-slider:slider_blur*/px;
     }
 
 

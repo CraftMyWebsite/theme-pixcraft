@@ -9,8 +9,8 @@ use CMW\Controller\Users\UsersController;
 use CMW\Utils\Website;
 
 /*TITRE ET DESCRIPTION*/
-Website::setTitle(ThemeModel::getInstance()->fetchConfigValue('news_title') . ' - '. $news->getTitle());
-Website::setDescription(ThemeModel::getInstance()->fetchConfigValue('news_description'));
+Website::setTitle(ThemeModel::getInstance()->fetchConfigValue('news','news_page_title') . ' - '. $news->getTitle());
+Website::setDescription($news->getDescription());
 ?>
 <section class="pt-8 lg:pt-16 px-8 md:px-36 2xl:px-96">
     <div class="lg:grid grid-cols-4 gap-16">

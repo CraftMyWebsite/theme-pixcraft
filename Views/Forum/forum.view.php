@@ -36,7 +36,7 @@ Website::setDescription("Consultez les sujets de discussion et répondez aux que
                 <li class="inline-flex items-center">
                     <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>forum"
                        class="inline-flex items-center text-sm font-medium text-gray-700 a-hover">
-                        <?= ThemeModel::getInstance()->fetchConfigValue('forum_breadcrumb_home') ?>
+                        <?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_breadcrumb_home') ?>
                     </a>
                 </li>
                 <li>
@@ -65,7 +65,7 @@ Website::setDescription("Consultez les sujets de discussion et répondez aux que
                     <div class="text-center mb-4">
                         <a href="<?= $forum->getLink() ?>/add" style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)"
                            class="font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"><i
-                                class="<?= ThemeModel::getInstance()->fetchConfigValue('forum_btn_create_topic_icon') ?>"></i> <?= ThemeModel::getInstance()->fetchConfigValue('forum_btn_create_topic') ?>
+                                class="<?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_btn_create_topic_icon') ?>"></i> <?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_btn_create_topic') ?>
                         </a>
                     </div>
                 <?php endif; ?>
@@ -76,20 +76,20 @@ Website::setDescription("Consultez les sujets de discussion et répondez aux que
 
 
 <section
-    class="<?php if (ThemeModel::getInstance()->fetchConfigValue('forum_use_widgets')): ?>lg:grid <?php endif; ?> grid-cols-4 gap-6 my-8 sm:mx-12 2xl:mx-72 ">
+    class="<?php if (ThemeModel::getInstance()->fetchConfigValue('forum','forum_use_widgets')): ?>lg:grid <?php endif; ?> grid-cols-4 gap-6 my-8 sm:mx-12 2xl:mx-72 ">
     <div class="lg:col-span-3 h-fit">
 
 
         <?php if ($forumModel->getSubforumByForum($forum->getId(), true)): ?>
             <div class="w-full shadow-md mb-10">
                 <div class="flex py-4 title-color forum-title-divider">
-                    <div class="md:w-[55%] px-4 font-bold"><?= ThemeModel::getInstance()->fetchConfigValue('forum_sub_forum') ?></div>
+                    <div class="md:w-[55%] px-4 font-bold"><?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_sub_forum') ?></div>
                     <div
-                        class="hidden md:block w-[10%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum_topics') ?></div>
+                        class="hidden md:block w-[10%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_topics') ?></div>
                     <div
-                        class="hidden md:block w-[10%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum_message') ?></div>
+                        class="hidden md:block w-[10%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_message') ?></div>
                     <div
-                        class="hidden md:block w-[25%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum_last_message') ?></div>
+                        class="hidden md:block w-[25%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_last_message') ?></div>
                 </div>
 
                 <?php foreach ($forumModel->getSubforumByForum($forum->getId(), true) as $forumEntity): ?>
@@ -134,7 +134,7 @@ Website::setDescription("Consultez les sujets de discussion et répondez aux que
                                         <?php endif; ?>
                                         <div class="ml-2">
                                             <div
-                                                class=""><?= $forumEntity->getLastResponse()?->getUser()->getPseudo() ?? ThemeModel::getInstance()->fetchConfigValue('forum_nobody_send_message_text') ?></div>
+                                                class=""><?= $forumEntity->getLastResponse()?->getUser()->getPseudo() ?? ThemeModel::getInstance()->fetchConfigValue('forum','forum_nobody_send_message_text') ?></div>
                                             <div><?= $forumEntity->getLastResponse()?->getCreated() ?? "" ?></div>
                                         </div>
                                     </a>
@@ -149,13 +149,13 @@ Website::setDescription("Consultez les sujets de discussion et répondez aux que
 
         <div class="w-full shadow-md mb-10">
             <div class="flex py-4 title-color forum-title-divider">
-                <div class="md:w-[55%] px-4 font-bold"><?= ThemeModel::getInstance()->fetchConfigValue('forum_topics') ?></div>
+                <div class="md:w-[55%] px-4 font-bold"><?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_topics') ?></div>
                 <div
-                    class="hidden md:block w-[10%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum_display') ?></div>
+                    class="hidden md:block w-[10%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_display') ?></div>
                 <div
-                    class="hidden md:block w-[10%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum_response') ?></div>
+                    class="hidden md:block w-[10%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_response') ?></div>
                 <div
-                    class="hidden md:block w-[25%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum_last_message') ?></div>
+                    class="hidden md:block w-[25%] font-bold text-center"><?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_last_message') ?></div>
             </div>
 
 
@@ -221,7 +221,7 @@ Website::setDescription("Consultez les sujets de discussion et répondez aux que
                                 <?php endif; ?>
                                 <div class="ml-2">
                                     <div
-                                        class=""><?= $topic->getLastResponse()?->getUser()->getPseudo() ?? ThemeModel::getInstance()->fetchConfigValue('forum_nobody_send_message_text') ?></div>
+                                        class=""><?= $topic->getLastResponse()?->getUser()->getPseudo() ?? ThemeModel::getInstance()->fetchConfigValue('forum','forum_nobody_send_message_text') ?></div>
                                     <div><?= $topic->getLastResponse()?->getCreated() ?? "" ?></div>
                                 </div>
                             </a>
@@ -420,47 +420,41 @@ Website::setDescription("Consultez les sujets de discussion et répondez aux que
 
     </div>
 
-    <?php if (ThemeModel::getInstance()->fetchConfigValue('forum_use_widgets')): ?>
-        <div class="h-fit">
-            <?php if (ThemeModel::getInstance()->fetchConfigValue('forum_widgets_show_stats')): ?>
-                <div class="w-full shadow-md mb-6">
-                    <div class="flex py-4 title-color forum-title-divider border-b">
-                        <div class="px-4 font-bold">Stats forum</div>
-                    </div>
-                    <div class="px-2 py-4">
-                        <?php if (ThemeModel::getInstance()->fetchConfigValue('forum_widgets_show_member')): ?>
-                            <p><?= ThemeModel::getInstance()->fetchConfigValue('forum_widgets_text_member') ?>
-                            <b><?= UsersModel::getInstance()->countUsers() ?></b></p><?php endif; ?>
-                        <?php if (ThemeModel::getInstance()->fetchConfigValue('forum_widgets_show_messages')): ?>
-                            <p><?= ThemeModel::getInstance()->fetchConfigValue('forum_widgets_text_messages') ?>
-                            <b><?= $forumModel->countAllMessagesInAllForum() ?></b></p><?php endif; ?>
-                        <?php if (ThemeModel::getInstance()->fetchConfigValue('forum_widgets_show_topics')): ?>
-                            <p><?= ThemeModel::getInstance()->fetchConfigValue('forum_widgets_text_topics') ?>
-                            <b><?= $forumModel->countAllTopicsInAllForum() ?></b></p><?php endif; ?>
-                    </div>
+    <div data-cmw-visible="forum:forum_use_widgets" class="h-fit">
+        <div data-cmw-visible="forum:forum_widgets_show_stats" class="w-full shadow-md mb-6">
+            <div class="flex py-4 title-color forum-title-divider border-b">
+                <div class="px-4 font-bold">Stats forum</div>
+            </div>
+            <div class="px-2 py-4">
+                <div data-cmw-visible="forum:forum_widgets_show_member">
+                    <span data-cmw="forum:forum_widgets_text_member"></span>
+                    <b><?= UsersModel::getInstance()->countUsers() ?></b>
                 </div>
-            <?php endif; ?>
-            <?php if (ThemeModel::getInstance()->fetchConfigValue('forum_widgets_show_discord')): ?>
-                <div class="w-full shadow-md mb-6">
-                    <div class="">
-                        <iframe style="width: 100%"
-                                src="https://discord.com/widget?id=<?= ThemeModel::getInstance()->fetchConfigValue('forum_widgets_content_id') ?>&theme=light"
-                                height="400" allowtransparency="true"
-                                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                    </div>
+                <div data-cmw-visible="forum:forum_widgets_show_messages">
+                    <span data-cmw="forum:forum_widgets_text_messages"></span>
+                    <b><?= $forumModel->countAllMessagesInAllForum() ?></b>
                 </div>
-            <?php endif; ?>
-            <?php if (ThemeModel::getInstance()->fetchConfigValue('forum_widgets_show_custom')): ?>
-                <div class="w-full shadow-md mb-6">
-                    <div class="flex py-4 title-color forum-title-divider border-b">
-                        <div
-                            class="px-4 font-bold"><?= ThemeModel::getInstance()->fetchConfigValue('forum_widgets_custom_title') ?></div>
-                    </div>
-                    <div class="px-2 py-4">
-                        <?= ThemeModel::getInstance()->fetchConfigValue('forum_widgets_custom_text') ?>
-                    </div>
+                <div data-cmw-visible="forum:forum_widgets_show_topics">
+                    <span data-cmw="forum:forum_widgets_text_topics"></span>
+                    <b><?= $forumModel->countAllTopicsInAllForum() ?></b>
                 </div>
-            <?php endif; ?>
+            </div>
         </div>
-    <?php endif; ?>
+        <div data-cmw-visible="forum:forum_widgets_show_discord" class="w-full shadow-md mb-6">
+            <div class="">
+                <iframe style="width: 100%"
+                        src="https://discord.com/widget?id=<?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_widgets_content_id') ?>&theme=light"
+                        height="400" allowtransparency="true"
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+        <div data-cmw-visible="forum:forum_widgets_show_custom" class="w-full shadow-md mb-6">
+            <div class="flex py-4 title-color forum-title-divider border-b">
+                <div
+                    class="px-4 font-bold" data-cmw="forum:forum_widgets_custom_title"></div>
+            </div>
+            <div class="px-2 py-4" data-cmw="forum:forum_widgets_custom_text">
+            </div>
+        </div>
+    </div>
 </section>

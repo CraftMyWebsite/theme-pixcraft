@@ -17,7 +17,7 @@ Website::setDescription("Votez, obtenez des points de vote et plein d'autres cad
     <div class="lg:grid grid-cols-3 gap-6">
         <div style="background-color: var(--bg-pixcraft-features); color: var(--color-pixcraft-features)" class="shadow-xl h-fit">
             <div class="page-title-divider text-center pt-1 w-full">
-                <h2 class="title-color font-semibold text-xl uppercase"><?= ThemeModel::getInstance()->fetchConfigValue('votes_participate_title') ?></h2>
+                <h2 class="title-color font-semibold text-xl uppercase" data-cmw="votes:votes_participate_title"></h2>
             </div>
             <div class="p-4">
                 <?php if (!UsersController::isUserLogged()): ?>
@@ -100,8 +100,7 @@ Website::setDescription("Votez, obtenez des points de vote et plein d'autres cad
             </div>
         </div>
     </div>
-    <?php if(ThemeModel::getInstance()->fetchConfigValue('votes_display_global')): ?>
-    <div style="background-color: var(--bg-pixcraft-features); color: var(--color-pixcraft-features)" class="shadow-xl col-span-2 h-fit mt-8">
+    <div data-cmw-visible="votes:votes_display_global" style="background-color: var(--bg-pixcraft-features); color: var(--color-pixcraft-features)" class="shadow-xl col-span-2 h-fit mt-8">
         <div class="page-title-divider text-center pt-1 w-full">
             <h2 class="title-color font-semibold text-xl uppercase">Top <?= VotesConfigModel::getInstance()->getConfig()->getTopShow() ?> global</h2>
         </div>
@@ -158,5 +157,4 @@ Website::setDescription("Votez, obtenez des points de vote et plein d'autres cad
             </table>
         </div>
     </div>
-    <?php endif; ?>
 </section>

@@ -85,13 +85,13 @@ Website::setDescription(Website::getWebsiteDescription());
     </section>
 
     <section data-cmw-visible="home-feature:feature_section_active" class="mt-9">
-        <div class="title-divider text-center py-4 w-full">
+        <div data-cmw-style="background-color:global:main_color" class="title-divider text-center py-4 w-full">
             <h2 data-cmw-class="global:website_secondary_font" class=" font-semibold text-2xl uppercase text-white" data-cmw="home-feature:feature_section_title"></h2>
         </div>
         <div class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
             <div class="lg:grid grid-cols-3 gap-32">
                 <div style="background-color: var(--bg-pixcraft-features); color: var(--color-pixcraft-features)" class="shadow-xl mb-8 lg:mb-0">
-                    <div class="p-4" style="background-color: var(--bg-pixcraft); color: var(--head-color-pixcraft)">
+                    <div class="p-4" data-cmw-style="background-color:global:main_color;color:global:head_text_color" >
                         <img class="mx-auto" width="50%" height="50%" data-cmw-attr="src:home-feature:feature_img_1" alt="feat1">
                     </div>
                     <div class="p-4">
@@ -100,7 +100,7 @@ Website::setDescription(Website::getWebsiteDescription());
                     </div>
                 </div>
                 <div style="background-color: var(--bg-pixcraft-features); color: var(--color-pixcraft-features)" class="shadow-xl mb-8 lg:mb-0">
-                    <div class="p-4" style="background-color: var(--bg-pixcraft); color: var(--head-color-pixcraft)">
+                    <div class="p-4" data-cmw-style="background-color:global:main_color;color:global:head_text_color" >
                         <img class="mx-auto" width="50%" height="50%" data-cmw-attr="src:home-feature:feature_img_2" alt="feat1">
                     </div>
                     <div class="p-4">
@@ -109,7 +109,7 @@ Website::setDescription(Website::getWebsiteDescription());
                     </div>
                 </div>
                 <div style="background-color: var(--bg-pixcraft-features); color: var(--color-pixcraft-features)" class="shadow-xl mb-8 lg:mb-0">
-                    <div class="p-4" style="background-color: var(--bg-pixcraft); color: var(--head-color-pixcraft)">
+                    <div class="p-4" data-cmw-style="background-color:global:main_color;color:global:head_text_color">
                         <img class="mx-auto" width="50%" height="50%" data-cmw-attr="src:home-feature:feature_img_3" alt="feat1">
                     </div>
                     <div class="p-4">
@@ -122,14 +122,14 @@ Website::setDescription(Website::getWebsiteDescription());
     </section>
 
     <section data-cmw-visible="home-join:join_section_active" class="mt-9">
-        <div class="title-divider text-center py-4 w-full">
+        <div data-cmw-style="background-color:global:main_color" class="title-divider text-center py-4 w-full">
             <h2 data-cmw-class="global:website_secondary_font" class=" font-semibold text-2xl uppercase text-white" data-cmw="home-join:join_title"></h2>
         </div>
         <div class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
             <div class="lg:grid grid-cols-4 gap-8">
                 <div class="text-center hover-effect">
                     <small data-cmw="home-join:join_step_1"></small>
-                    <div style="background-color: var(--bg-pixcraft); color: var(--head-color-pixcraft)" class="round-icon-step mx-auto">
+                    <div data-cmw-style="background-color:global:main_color;color:global:head_text_color" class="round-icon-step mx-auto">
                         <i data-cmw-class="home-join:join_icon_1" class=" fa-2xl"></i>
                     </div>
                     <h4 class="mt-4 border-b py-1" data-cmw="home-join:join_title_1"></h4>
@@ -137,7 +137,7 @@ Website::setDescription(Website::getWebsiteDescription());
                 </div>
                 <div class="text-center hover-effect">
                     <small data-cmw="home-join:join_step_2"></small>
-                    <div style="background-color: var(--bg-pixcraft); color: var(--head-color-pixcraft)" class="round-icon-step mx-auto">
+                    <div data-cmw-style="background-color:global:main_color;color:global:head_text_color" class="round-icon-step mx-auto">
                         <i data-cmw-class="home-join:join_icon_2" class=" fa-2xl"></i>
                     </div>
                     <h4 data-cmw="home-join:join_title_2" class="mt-4 border-b py-1"></h4>
@@ -145,7 +145,7 @@ Website::setDescription(Website::getWebsiteDescription());
                 </div>
                 <div class="text-center hover-effect">
                     <small data-cmw="home-join:join_step_3"></small>
-                    <div style="background-color: var(--bg-pixcraft); color: var(--head-color-pixcraft)" class="round-icon-step mx-auto">
+                    <div data-cmw-style="background-color:global:main_color;color:global:head_text_color" class="round-icon-step mx-auto">
                         <i data-cmw-class="home-join:join_icon_3" class=" fa-2xl"></i>
                     </div>
                     <h4 data-cmw="home-join:join_title_3" class="mt-4 border-b py-1"></h4>
@@ -153,7 +153,7 @@ Website::setDescription(Website::getWebsiteDescription());
                 </div>
                 <div class="text-center hover-effect">
                     <small data-cmw="home-join:join_step_4"></small>
-                    <div style="background-color: var(--bg-pixcraft); color: var(--head-color-pixcraft)" class="round-icon-step mx-auto">
+                    <div data-cmw-style="background-color:global:main_color;color:global:head_text_color" class="round-icon-step mx-auto">
                         <i data-cmw-class="home-join:join_icon_4" class=" fa-2xl"></i>
                     </div>
                     <h4 data-cmw="home-join:join_title_4" class="mt-4 border-b py-1"></h4>
@@ -169,14 +169,14 @@ Website::setDescription(Website::getWebsiteDescription());
 
 <?php if (PackageController::isInstalled("News")): ?>
 <section data-cmw-visible="home-news:news_section_active" class="mt-9">
-    <div class="title-divider text-center py-4 w-full">
+    <div data-cmw-style="background-color:global:main_color" class="title-divider text-center py-4 w-full">
         <h2 data-cmw-class="global:website_secondary_font" class="font-semibold text-2xl uppercase text-white" data-cmw="home-news:news_section_title"></h2>
     </div>
     <div class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
         <div class="lg:grid grid-cols-2 gap-16">
             <?php foreach ($newsList as $news): ?>
             <div style="background-color: var(--bg-pixcraft-features); color: var(--color-pixcraft-features)" class="shadow-xl mb-8 lg:mb-0">
-                <div class="relative p-4" style="background-color: var(--bg-pixcraft); color: var(--head-color-pixcraft)">
+                <div class="relative p-4" data-cmw-style="background-color:global:main_color;color:global:head_text_color" >
                     <img class="mx-auto" width="50%" height="50%" src="<?= $news->getImageLink() ?>" alt="news">
                     <div class="absolute top-0 left-1">
                         <p class="text-sm"><?= $news->getAuthor()->getPseudo() ?></p>
@@ -210,7 +210,7 @@ Website::setDescription(Website::getWebsiteDescription());
                                 </span>
                             <?php endif; ?>
                         </div>
-                        <a style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)" class="py-1 px-4 text-xs" href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>news/<?= $news->getSlug() ?>">Lire la suite ></a>
+                        <a data-cmw-style="background-color:global:main_color" style="color: var(--nav-color-pixcraft-hover)" class="py-1 px-4 text-xs" href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>news/<?= $news->getSlug() ?>">Lire la suite ></a>
                     </div>
                 </div>
             </div>
@@ -224,7 +224,7 @@ Website::setDescription(Website::getWebsiteDescription());
 
 <!-- Personnalisé 1 -->
     <section data-cmw-visible="home-custom:custom_section_active_1" class="mt-9">
-        <div class="title-divider text-center py-4 w-full">
+        <div data-cmw-style="background-color:global:main_color" class="title-divider text-center py-4 w-full">
             <h2 data-cmw-class="global:website_secondary_font" class=" font-semibold text-2xl uppercase text-white" data-cmw="home-custom:custom_section_title_1"></h2>
         </div>
         <div data-cmw="home-custom:custom_section_content_1" class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
@@ -233,7 +233,7 @@ Website::setDescription(Website::getWebsiteDescription());
 
 <!-- Personnalisé 2 -->
     <section data-cmw-visible="home-custom:custom_section_active_2" class="mt-9">
-        <div class="title-divider text-center py-4 w-full">
+        <div data-cmw-style="background-color:global:main_color" class="title-divider text-center py-4 w-full">
             <h2 data-cmw-class="global:website_secondary_font" class="font-semibold text-2xl uppercase text-white" data-cmw="home-custom:custom_section_title_2"></h2>
         </div>
         <div data-cmw="home-custom:custom_section_content_2" class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
@@ -242,7 +242,7 @@ Website::setDescription(Website::getWebsiteDescription());
 
 <!-- Personnalisé 3 -->
     <section data-cmw-visible="home-custom:custom_section_active_3" class="mt-9">
-        <div class="title-divider text-center py-4 w-full">
+        <div data-cmw-style="background-color:global:main_color" class="title-divider text-center py-4 w-full">
             <h2 data-cmw-class="global:website_secondary_font" class="font-semibold text-2xl uppercase text-white" data-cmw="home-custom:custom_section_title_3"></h2>
         </div>
         <div data-cmw="home-custom:custom_section_content_3" class="pt-16 lg:pb-8 px-8 md:px-36 2xl:px-96">
@@ -252,7 +252,7 @@ Website::setDescription(Website::getWebsiteDescription());
 <!-- Contact -->
 <?php if (PackageController::isInstalled("Contact")): ?>
 <section data-cmw-visible="home-contact:contact_section_active" class="mt-9">
-    <div class="title-divider text-center py-4 w-full">
+    <div data-cmw-style="background-color:global:main_color" class="title-divider text-center py-4 w-full">
         <h2 data-cmw-class="global:website_secondary_font" class="font-semibold text-2xl uppercase text-white" data-cmw="home-contact:contact_section_title"></h2>
     </div>
     <div class="lg:pb-8 px-8 md:px-36 2xl:px-96">
@@ -282,7 +282,7 @@ Website::setDescription(Website::getWebsiteDescription());
                 </div>
 
                 <div class="text-center mt-4">
-                    <button type="submit" style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)" class="font-medium rounded px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2">Soumettre <i class="fa-solid fa-paper-plane"></i></button>
+                    <button type="submit" data-cmw-style="background-color:global:main_color" style="color: var(--nav-color-pixcraft-hover)" class="font-medium rounded px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2">Soumettre <i class="fa-solid fa-paper-plane"></i></button>
                 </div>
             </form>
         </div>
@@ -292,7 +292,7 @@ Website::setDescription(Website::getWebsiteDescription());
 
 <?php if (PackageController::isInstalled('Newsletter')): ?>
 <section data-cmw-visible="home-newsletter:newsletter_section_active" class="mt-9">
-    <div class="title-divider text-center py-4 w-full">
+    <div data-cmw-style="background-color:global:main_color" class="title-divider text-center py-4 w-full">
         <h2 data-cmw-class="global:website_secondary_font" class="font-semibold text-2xl uppercase text-white" data-cmw="home-newsletter:newsletter_section_title"></h2>
     </div>
     <div class="lg:pb-8 px-8 md:px-36 2xl:px-96">
@@ -307,7 +307,7 @@ Website::setDescription(Website::getWebsiteDescription());
                     <?php SecurityController::getPublicData(); ?>
                 </div>
                 <div class="text-center mt-4">
-                    <button type="submit" style="background-color: var(--bg-pixcraft); color: var(--nav-color-pixcraft-hover)" class="font-medium rounded px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2" data-cmw="home-newsletter:newsletter_section_button"></button>
+                    <button type="submit" data-cmw-style="background-color:global:main_color" style="color: var(--nav-color-pixcraft-hover)" class="font-medium rounded px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2" data-cmw="home-newsletter:newsletter_section_button"></button>
                 </div>
             </form>
         </div>

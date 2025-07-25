@@ -91,7 +91,7 @@ Website::setDescription("Éditez votre profil");
                 <h2 class="title-color font-semibold text-xl uppercase">Vous nous quittez ?</h2>
             </div>
             <div class="p-4 flex flex-col justify-center items-center">
-                <img class="my-2" width="30%" alt="dead" src="<?= ThemeModel::getInstance()->fetchImageLink("profile_broken") ?>">
+                <img class="my-2" width="30%" alt="dead" data-cmw-attr="src:global:profile_broken">
                 <p class="block mt-2 mb-2 text-sm font-medium text-gray-900">Nous sommes triste de vous voir partir !</p>
                 <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>profile/delete/<?= $user->getId() ?>" style="background-color: #e30d0d; color: white" class="w-full rounded text-sm px-5 py-2.5 text-center">Supprimer mon compte</a>
             </div>

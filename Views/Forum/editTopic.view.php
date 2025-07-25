@@ -19,7 +19,7 @@ Website::setDescription("Éditez un topic");
             <ol class="inline-flex items-center space-x-1">
                 <li class="inline-flex items-center">
                     <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>forum" class="inline-flex items-center text-sm font-medium text-gray-700 a-hover">
-                        <?= ThemeModel::getInstance()->fetchConfigValue('forum_breadcrumb_home') ?>
+                        <?= ThemeModel::getInstance()->fetchConfigValue('forum','forum_breadcrumb_home') ?>
                     </a>
                 </li>
                 <li>
