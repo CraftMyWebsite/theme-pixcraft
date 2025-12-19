@@ -93,7 +93,7 @@ Website::setDescription("Éditez votre profil");
             <div class="p-4 flex flex-col justify-center items-center">
                 <img class="my-2" width="30%" alt="dead" data-cmw-attr="src:global:profile_broken">
                 <p class="block mt-2 mb-2 text-sm font-medium text-gray-900">Nous sommes triste de vous voir partir !</p>
-                <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>profile/delete/<?= $user->getId() ?>" style="background-color: #e30d0d; color: white" class="w-full rounded text-sm px-5 py-2.5 text-center">Supprimer mon compte</a>
+                <a href="<?= EnvManager::getInstance()->getValue("PATH_SUBFOLDER") ?>account/delete/<?= $user->getId() ?>" style="background-color: #e30d0d; color: white" class="w-full rounded text-sm px-5 py-2.5 text-center">Supprimer mon compte</a>
             </div>
         </div>
     </div>
